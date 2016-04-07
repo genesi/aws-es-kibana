@@ -21,7 +21,7 @@ if (!m) {
 var REGION = m[1];
 var TARGET = 'https://' + process.argv[2];
 var PORT = 9200;
-var BIND_ADDRESS = '127.0.0.1';
+var BIND_ADDRESS = '0.0.0.0';
 
 var creds;
 var chain = new AWS.CredentialProviderChain();
