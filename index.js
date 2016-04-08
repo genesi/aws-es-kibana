@@ -43,7 +43,7 @@ var proxy = httpProxy.createProxyServer({
 });
 
 var app = express();
-app.use(bodyParser.raw({type: '*/*'}));
+app.use(bodyParser.raw({limit: '50mb', type: '*/*'}));
 app.use(getcreds);
 app.use(function (req, res) {
     var bufferStream;
